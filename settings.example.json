@@ -1,0 +1,9 @@
+{
+  "packages": [
+    {
+      "source": "/opt/homebrew/lib/node_modules/gentle-pi",
+      "extensions": ["!extensions/startup-banner.ts"]
+    },
+    "/Users/douglas/Developer/arthurito"
+  ]
+}

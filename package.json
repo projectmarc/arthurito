@@ -1,0 +1,22 @@
+{
+  "name": "arthurito",
+  "version": "0.1.0",
+  "description": "Standalone Pi / Gentle Shell extension replacing the startup banner with Arthur ASCII art",
+  "type": "module",
+  "main": "./arthur.ts",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./arthur.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  }
+}
