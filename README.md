@@ -6,7 +6,7 @@ A standalone Pi / Gentle Shell extension that replaces the entire startup header
 
 Gentle Shell must load Arthur **instead of** its native startup banner. Passing `-e arthur.ts` alone is not sufficient: the launcher can also inject its native banner, which overwrites Arthur later.
 
-`settings.example.json` contains the two package entries needed for this machine. Merge those entries into the existing `packages` array in `/Users/douglas/.gentle-shell/agent/settings.json`, preserving all other packages and settings:
+`settings.example.json` contains the two package entries you need. Merge those entries into the existing `packages` array in `~/.gentle-shell/agent/settings.json`, preserving all other packages and settings:
 
 ```json
 {
@@ -16,7 +16,7 @@ Gentle Shell must load Arthur **instead of** its native startup banner. Passing 
 ```
 
 ```json
-"/Users/douglas/Developer/arthurito"
+"/path/to/arthurito"
 ```
 
 If a Gentle Pi package entry already exists, update that entry rather than registering a second copy. The explicit Gentle Pi declaration tells the launcher not to inject an unfiltered copy. Its package filter disables only `startup-banner.ts`; all its other extensions, skills, prompts, and themes remain available.
@@ -27,7 +27,7 @@ Restart with:
 gentle-shell
 ```
 
-These are local package references: keep this repository in place. Adjust both paths if either package moves. No installation source files need modification. The example contains only the package entries for this customization: never use it to overwrite your whole settings file.
+These are local package references: replace `/path/to/arthurito` with the absolute path where you cloned this repository, and adjust the Gentle Pi path if it is installed elsewhere (the example assumes a global Homebrew npm install on macOS). No installation source files need modification. The example contains only the package entries for this customization: never use it to overwrite your whole settings file.
 
 ## Behavior
 
